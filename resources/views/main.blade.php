@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@section('title', 'Альбомы')
 @section('content')
     <div class="container">
         <a href="{{ route('album-add') }}">Добавить новый</a>

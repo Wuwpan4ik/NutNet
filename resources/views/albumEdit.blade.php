@@ -1,8 +1,9 @@
 @extends('layouts.main')
+@section('title', 'Редактировать альбом')
 @section('content')
     <div class="container">
         <div class="profile">
-            <h1 class="profile__name">Изменить альбом</h1>
+            <h1 class="profile__name">Редактировать альбом</h1>
             <div class="profile__notes">
                 <form class="profile__form" action="{{ route('album-edit') }}" method="POST">
                     @csrf
