@@ -15,10 +15,13 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased">
+    <div class="container">
+        <div class="font-sans text-gray-900 antialiased d-flex justify-content-center align-content-center w100">
             {{ $slot }}
         </div>
+    </div>
     </body>
 </html>

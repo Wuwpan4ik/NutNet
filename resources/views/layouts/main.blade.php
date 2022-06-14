@@ -22,7 +22,7 @@
                 <a href="{{ route('register') }}" class="btn btn-outline-primary me-2">Login</a>
                 <a href="{{ route('login') }}" type="button" class="btn btn-primary">Sign-up</a>
             @else
-            {{ Auth::user()->name }}
+                {{ Auth::user()->name }}
             @endif
         </div>
     </header>

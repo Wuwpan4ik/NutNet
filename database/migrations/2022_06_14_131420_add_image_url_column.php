@@ -1,9 +1,10 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAlbumsTable extends Migration
+class AddImageUrlColumn extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +13,8 @@ class CreateAlbumsTable extends Migration
      */
     public function up()
     {
-        Schema::create('albums', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->char('name', '32');
-            $table->char('author', '32');
-            $table->text('description');
+        Schema::table('albums', function (Blueprint $table) {
             $table->string('image_url')->nullable();
-            $table->timestamps();
         });
     }
 
@@ -29,6 +25,6 @@ class CreateAlbumsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('albums');
+        //
     }
 }

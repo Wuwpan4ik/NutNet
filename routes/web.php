@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\AlbumControllerTest;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +12,12 @@ use App\Http\Controllers\AlbumController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [MainController::class, 'view'])->name('main');
-Route::any('/add', [AlbumController::class, 'create'])->name('album-add');
-
+if(version_compare(PHP_VERSION, '7.2.0', '>=')) {
+    error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+}
+Route::get('/', [AlbumControllerTest::class, 'index'])->name('main');
 Route::middleware('auth')->group(function () {
-    Route::any('/remove', [AlbumController::class, 'remove'])->name('album-remove');
-    Route::any('/edit', [AlbumController::class, 'edit'])->name('album-edit');
+    Route::resource('album', AlbumControllerTest::class);
 });
 
 require __DIR__.'/auth.php';

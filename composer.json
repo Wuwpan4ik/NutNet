@@ -6,8 +6,10 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "barryvanveen/lastfm": "*",
+        "doctrine/dbal": "^3.3",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
+        "guzzlehttp/guzzle": "6.0",
         "inertiajs/inertia-laravel": "^0.5.4",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.8",
