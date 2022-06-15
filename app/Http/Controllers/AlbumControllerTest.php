@@ -42,7 +42,6 @@ class AlbumControllerTest extends Controller
      */
     public function store(AlbumStoreRequest $request)
     {
-        dump($request);
         $album = new Album();
         $album->name = $request->input('name');
         $album->author = $request->input('author');
