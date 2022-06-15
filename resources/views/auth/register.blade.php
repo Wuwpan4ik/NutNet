@@ -4,7 +4,6 @@
         </x-slot>
         <x-auth-validation-errors class="mb-4" :errors="$errors"></x-auth-validation-errors>
         <section class="pb-4">
-
                 <section class="p-5 w-100">
                     <div class="row">
                         <div class="col-12">
@@ -13,7 +12,7 @@
                                     <div class="row justify-content-center">
                                         <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                                            <p class="text-center h1 fw-bold mb-5 mt-4">Sign up</p>
+                                            <p class="text-center h1 fw-bold mb-5 mt-4">Register</p>
 
                                             <form method="POST" action="{{ route('register') }}">
                                                 @csrf
